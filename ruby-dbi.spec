@@ -11,6 +11,7 @@ Group:		Development/Ruby
 License:	BSD-like
 URL:		http://ruby-dbi.rubyforge.org/
 Source:		http://rubyforge.org/frs/download.php/33959/%{base_name}-%{version}.tar.gz
+BuildRequires:	ruby
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
