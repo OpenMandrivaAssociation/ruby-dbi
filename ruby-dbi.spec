@@ -1,7 +1,10 @@
 %define base_name	dbi
 %define name	ruby-%{base_name}
 %define version	0.2.0
-%define release	%mkrel 1
+%define release	%mkrel 2
+
+# Be backportable
+%{!?ruby_vendorlibdir:%define ruby_vendorlibdir %ruby_sitelibdir}
 
 Name:		%{name}
 Version:	%{version}
@@ -25,7 +28,6 @@ by Tim Bunce.
 ruby setup.rb config --with=dbi,dbd_proxy,dbd_sqlite,dbd_mysql,dbd_pg,dbd_sqlite3,dbd_odbc,dbd_ado,dbd_sqlrelay \
 	--bin-dir=%{buildroot}%{_bindir} \
 	--rb-dir=%{buildroot}%{ruby_vendorlibdir}
-
 ruby setup.rb setup
 
 %install
