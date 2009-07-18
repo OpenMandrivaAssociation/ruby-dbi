@@ -1,7 +1,7 @@
 %define base_name	dbi
 %define name	ruby-%{base_name}
-%define version	0.2.0
-%define release	%mkrel 2
+%define version	0.4.2
+%define release	%mkrel 1
 
 # Be backportable
 %{!?ruby_vendorlibdir:%define ruby_vendorlibdir %ruby_sitelibdir}
@@ -15,6 +15,7 @@ License:	BSD-like
 URL:		http://ruby-dbi.rubyforge.org/
 Source:		http://rubyforge.org/frs/download.php/33959/%{base_name}-%{version}.tar.gz
 BuildRequires:	ruby
+BuildArch:	    noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
@@ -25,7 +26,7 @@ by Tim Bunce.
 %setup -q -n %{base_name}-%{version}
 
 %build
-ruby setup.rb config --with=dbi,dbd_proxy,dbd_sqlite,dbd_mysql,dbd_pg,dbd_sqlite3,dbd_odbc,dbd_ado,dbd_sqlrelay \
+ruby setup.rb config \
 	--bin-dir=%{buildroot}%{_bindir} \
 	--rb-dir=%{buildroot}%{ruby_vendorlibdir}
 ruby setup.rb setup
@@ -41,6 +42,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README ChangeLog examples LICENSE
 %_bindir/*
-%ruby_vendorlibdir/DBD
-%ruby_vendorlibdir/dbi*
+%{ruby_vendorlibdir}/dbi*
 
