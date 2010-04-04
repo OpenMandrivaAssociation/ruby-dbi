@@ -1,6 +1,6 @@
 %define base_name	dbi
 %define name	ruby-%{base_name}
-%define version	0.4.2
+%define version	0.4.3
 %define release	%mkrel 1
 
 # Be backportable
@@ -13,7 +13,7 @@ Summary:	A database independent interface for accessing database
 Group:		Development/Ruby
 License:	BSD-like
 URL:		http://ruby-dbi.rubyforge.org/
-Source:		http://rubyforge.org/frs/download.php/33959/%{base_name}-%{version}.tar.gz
+Source:		http://rubyforge.org/frs/download.php/63601/%{base_name}-%{version}.tar.gz
 BuildRequires:	ruby
 BuildArch:	    noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}
