@@ -44,3 +44,30 @@ rm -rf %{buildroot}
 %_bindir/*
 %{ruby_vendorlibdir}/dbi*
 
+
+
+%changelog
+* Tue Dec 07 2010 Oden Eriksson <oeriksson@mandriva.com> 0.4.3-2mdv2011.0
++ Revision: 614725
+- the mass rebuild of 2010.1 packages
+
+* Sun Apr 04 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.4.3-1mdv2010.1
++ Revision: 531332
+- new version
+
+* Sat Jul 18 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.4.2-1mdv2010.0
++ Revision: 397043
+- new version
+
+* Wed Sep 03 2008 Pascal Terjan <pterjan@mandriva.org> 0.2.0-2mdv2009.0
++ Revision: 279352
+- Fix backports
+
+* Tue Sep 02 2008 Pascal Terjan <pterjan@mandriva.org> 0.2.0-1mdv2009.0
++ Revision: 279046
+- BuildRequires ruby
+- import ruby-dbi
+
+
+* Thu Aug 14 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.2.0-1mdv2009.0
+- first mdv release
