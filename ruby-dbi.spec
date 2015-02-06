@@ -1,7 +1,7 @@
 %define base_name	dbi
 %define name	ruby-%{base_name}
 %define version	0.4.3
-%define release	%mkrel 2
+%define release	3
 
 # Be backportable
 %{!?ruby_vendorlibdir:%define ruby_vendorlibdir %ruby_sitelibdir}
