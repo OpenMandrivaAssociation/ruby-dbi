@@ -12,7 +12,7 @@ Release:	%{release}
 Summary:	A database independent interface for accessing database
 Group:		Development/Ruby
 License:	BSD-like
-URL:		http://ruby-dbi.rubyforge.org/
+URL:		https://ruby-dbi.rubyforge.org/
 Source:		http://rubyforge.org/frs/download.php/63601/%{base_name}-%{version}.tar.gz
 BuildRequires:	ruby
 BuildArch:	    noarch
